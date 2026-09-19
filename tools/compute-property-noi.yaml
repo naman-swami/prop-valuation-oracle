@@ -1,0 +1,33 @@
+annotations:
+  cost: none
+  read_only: true
+  requires_confirmation: false
+description: Calculate Net Operating Income from gross potential rent, vacancy rate,
+  and operating expenses.
+input_schema:
+  additionalProperties: false
+  properties:
+    gross_rent:
+      type: number
+    operating_expenses:
+      type: number
+    vacancy_rate:
+      type: number
+  required:
+  - gross_rent
+  - operating_expenses
+  type: object
+name: compute-property-noi
+output_schema:
+  additionalProperties: false
+  properties:
+    confidence:
+      type: number
+    data:
+      type: string
+    status:
+      type: string
+  required:
+  - status
+  - data
+  type: object

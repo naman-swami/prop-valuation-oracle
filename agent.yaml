@@ -1,0 +1,6 @@
+spec_version: "0.1.0"
+name: prop-valuation-oracle
+version: "0.1.0"
+description: "Commercial property valuation, discounted cash flow (DCF), and cap rate risk analyzer agent executing institutional financial underwriting."
+model:
+  preferred: llama-3.3-70b-versatile

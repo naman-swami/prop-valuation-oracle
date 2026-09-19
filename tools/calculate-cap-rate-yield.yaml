@@ -1,0 +1,30 @@
+annotations:
+  cost: none
+  read_only: true
+  requires_confirmation: false
+description: Compute capitalization rate and asset valuation across prevailing market
+  yield spreads.
+input_schema:
+  additionalProperties: false
+  properties:
+    net_operating_income:
+      type: number
+    purchase_price:
+      type: number
+  required:
+  - net_operating_income
+  type: object
+name: calculate-cap-rate-yield
+output_schema:
+  additionalProperties: false
+  properties:
+    confidence:
+      type: number
+    data:
+      type: string
+    status:
+      type: string
+  required:
+  - status
+  - data
+  type: object

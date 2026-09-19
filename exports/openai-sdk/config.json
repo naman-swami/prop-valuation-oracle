@@ -1,0 +1,28 @@
+{
+  "name": "prop-valuation-oracle",
+  "instructions": "You are prop-valuation-oracle. Underwrite commercial real estate assets, calculate Net Operating Income (NOI), model debt-service coverage (DSCR), and audit property cap rate sensitivity.",
+  "model": "gpt-4o",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "compute-property-noi",
+        "description": "Calculate Net Operating Income from gross potential rent, vacancy rate, and operating expenses."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculate-cap-rate-yield",
+        "description": "Compute capitalization rate and asset valuation across prevailing market yield spreads."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "stress-test-dscr",
+        "description": "Evaluate Debt Service Coverage Ratio under varying interest rates and debt structures."
+      }
+    }
+  ]
+}
