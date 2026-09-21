@@ -1,13 +1,13 @@
+import os
 import pytest
-from src.valuation_engine import PropertyValuationEngine
+from models.hedonic_pricing_model import RealEstateValuationEngine
 
-def test_valuation_scale():
-    engine = PropertyValuationEngine()
-    val = engine.estimate_property_value(2000, 3, 2.0, 5, 8.0)
-    assert val["estimated_valuation_usd"] > 500000
-
-def test_cap_rate():
-    engine = PropertyValuationEngine()
-    cap = engine.compute_cap_rate(1000000, 100000, operating_expense_ratio=0.40)
-    # NOI = 60,000 / 1,000,000 = 6.0%
-    assert cap["cap_rate_pct"] == 6.0
+def test_valuation_and_cap_rate():
+    res = RealEstateValuationEngine.calculate_valuation_and_cap_rate(
+        sqft=2000, base_price_per_sqft=300.0, bedrooms=3, year_built=2025,
+        gross_rent=40000.0, operating_expenses=10000.0
+    )
+    assert res["estimated_property_value_usd"] == 600000.0
+    assert res["net_operating_income_usd"] == 30000.0
+    assert res["capitalization_rate_pct"] == 5.0
+    assert res["investment_rating"] == "CORE_STABILIZED"

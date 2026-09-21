@@ -1,0 +1,22 @@
+[
+  {
+    "comp_id": "PROP-401",
+    "sqft": 2200,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "year_built": 2018,
+    "annual_gross_rent": 48000.0,
+    "operating_expenses": 14000.0,
+    "sale_price_usd": 680000.0
+  },
+  {
+    "comp_id": "PROP-402",
+    "sqft": 1850,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "year_built": 2012,
+    "annual_gross_rent": 36000.0,
+    "operating_expenses": 11000.0,
+    "sale_price_usd": 520000.0
+  }
+]
