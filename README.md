@@ -55,7 +55,7 @@ prop-valuation-oracle/
 │   └── uspap_appraisal_standards.md # Real estate appraisal standards
 ├── tests/
 │   └── test_agent.py                # Valuation test suite
-├── main.py                          # PropTech CLI
+├── val_oracle.py                          # PropTech CLI
 └── requirements.txt
 ```
 
@@ -66,5 +66,5 @@ prop-valuation-oracle/
 pytest tests/ -v
 
 # Appraise sample market comps
-python main.py --demo
+python val_oracle.py --demo
 ```
